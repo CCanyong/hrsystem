@@ -6,6 +6,7 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,6 +33,12 @@ public class LoginController {
 
     @PostMapping("/register")
     public Result register() {
+        return ResultUtil.getSuccess();
+    }
+
+    @GetMapping("/logout")
+    public Result logout() {
+        SecurityUtils.getSubject().logout();
         return ResultUtil.getSuccess();
     }
 }

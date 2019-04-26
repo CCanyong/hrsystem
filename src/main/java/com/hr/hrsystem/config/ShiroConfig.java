@@ -18,9 +18,9 @@ public class ShiroConfig {
     public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager) {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
-        Map<String,String> filterChainDefinitionMap = new HashMap<>();
-        filterChainDefinitionMap.put("/staff/**","authc");
-    shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
+        Map<String, String> filterChainDefinitionMap = new HashMap<>();
+        //filterChainDefinitionMap.put("/staff/**", "authc");
+        shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
         return shiroFilterFactoryBean;
     }
 
@@ -46,10 +46,11 @@ public class ShiroConfig {
 
     /**
      * 注册hrRealm到容器
+     *
      * @return
      */
     @Bean
-    public HrRealm hrRealm(){
+    public HrRealm hrRealm() {
         return new HrRealm();
     }
 

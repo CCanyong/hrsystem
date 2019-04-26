@@ -7,6 +7,8 @@ import java.util.Date;
  */
 public class Staff {
 
+    private int id;
+
     private String name;
 
     private String department;
@@ -28,6 +30,14 @@ public class Staff {
     }
 
     public Staff() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

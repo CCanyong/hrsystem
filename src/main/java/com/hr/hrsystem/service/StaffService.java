@@ -8,7 +8,7 @@ public interface StaffService {
 
     void addStaff(Staff staff);
 
-    void deleteStaff(String name);
+    void deleteStaff(int id);
 
     List<Staff> getAllStaff();
 

@@ -14,11 +14,11 @@ import java.util.List;
 @Mapper
 public interface StaffMapper {
 
-    @Insert("INSERT INTO staff() VALUES(#{name},#{department},#{position},#{tel},#{joinDate})")
+    @Insert("INSERT INTO staff(name,department,position,tel,joinDate) VALUES(#{name},#{department},#{position},#{tel},#{joinDate})")
     void addStaff(Staff staff);
 
-    @Delete("DELETE FROM staff WHERE name = #{name}")
-    void deleteStaff(String name);
+    @Delete("DELETE FROM staff WHERE id = #{id}")
+    void deleteStaff(int id);
 
     @Select("SELECT * FROM staff")
     List<Staff> getAllStaff();

@@ -33,8 +33,8 @@ public class StaffServiceImpl implements StaffService {
     }
 
     @Override
-    public void deleteStaff(String name) {
-        staffMapper.deleteStaff(name);
+    public void deleteStaff(int id) {
+        staffMapper.deleteStaff(id);
     }
 
     @Override

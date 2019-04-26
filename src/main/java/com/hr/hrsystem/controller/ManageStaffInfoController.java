@@ -22,9 +22,9 @@ public class ManageStaffInfoController {
         return ResultUtil.getSuccess();
     }
 
-    @GetMapping("/delete/{name}")
-    public Result delStaff(@PathVariable("name") String name) {
-        staffService.deleteStaff(name);
+    @GetMapping("/delete/{id}")
+    public Result delStaff(@PathVariable("id") int id) {
+        staffService.deleteStaff(id);
         return ResultUtil.getSuccess();
     }
 
