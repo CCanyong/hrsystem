@@ -11,6 +11,15 @@ public class HR {
 
     private String password;
 
+    public HR(String name, String account, String password) {
+        this.name = name;
+        this.account = account;
+        this.password = password;
+    }
+
+    public HR() {
+    }
+
     public String getName() {
         return name;
     }

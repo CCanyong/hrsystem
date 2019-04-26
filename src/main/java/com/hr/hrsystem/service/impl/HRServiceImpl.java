@@ -14,13 +14,21 @@ public class HRServiceImpl implements HRService {
     @Autowired
     HrMapper hrMapper;
 
-    @Override
-    public boolean checkLogin(HR hr) {
-        return !(hrMapper.getHrNum(hr) == 0);
-    }
 
     @Override
     public HR getHr(String account) {
         return hrMapper.getHr(account);
+    }
+
+    @Override
+    public void addHr(HR hr) {
+       hrMapper.addHr(hr);
+    }
+
+    @Override
+    public boolean isExist(String account) {
+        if(hrMapper.getHrNum(account)==0)
+            return false;
+        return true;
     }
 }

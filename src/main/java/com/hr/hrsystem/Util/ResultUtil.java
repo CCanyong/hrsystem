@@ -23,4 +23,8 @@ public class ResultUtil {
     public static Result getFailed(){
         return new Result(FAILED_CODE, FAILED_MSG);
     }
+
+    public static Result getFailed(int code){
+        return new Result(code, FAILED_MSG);
+    }
 }

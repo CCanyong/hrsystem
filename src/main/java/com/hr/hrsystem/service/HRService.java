@@ -4,7 +4,9 @@ import com.hr.hrsystem.entity.HR;
 
 public interface HRService {
 
-    boolean checkLogin(HR hr);
-
     HR getHr(String account);
+
+    void addHr(HR hr);
+
+    boolean isExist(String account);
 }
